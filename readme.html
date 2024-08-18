@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Live Chat Combiner</title>
+</head>
+<body>
+    <h1>YouTube Live Chat Combiner</h1>
+
+    <p>This Node.js application combines YouTube live chat and YouTube Shorts live chat into a single feed. It allows users to view both chats in one interface, making it easier to manage and interact with viewers across both platforms.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Combines live chats from YouTube live streams and YouTube Shorts.</li>
+        <li>Displays the newest messages at the top of the chat feed.</li>
+        <li>Provides an interface to dynamically input and update the video IDs for both streams.</li>
+    </ul>
+
+    <h2>Prerequisites</h2>
+    <ul>
+        <li><a href="https://nodejs.org/">Node.js</a> installed on your machine.</li>
+        <li>A YouTube Data API v3 key.</li>
+    </ul>
+
+    <h2>Getting Started</h2>
+
+    <h3>Installation</h3>
+    <ol>
+        <li>
+            <strong>Clone the repository:</strong>
+            <pre><code>git clone &lt;repository-url&gt;
+cd youtube-live-chat-combiner</code></pre>
+        </li>
+        <li>
+            <strong>Install the dependencies:</strong>
+            <pre><code>npm install</code></pre>
+        </li>
+        <li>
+            <strong>Set up your environment variables:</strong>
+            <p>Create a <code>.env</code> file in the root directory of the project (if it doesn't already exist) and add your YouTube Data API key:</p>
+            <pre><code>YOUTUBE_API_KEY=your_youtube_api_key_here</code></pre>
+        </li>
+    </ol>
+
+    <h3>Running the Application</h3>
+    <ol>
+        <li>
+            <strong>Start the server:</strong>
+            <pre><code>node server.js</code></pre>
+        </li>
+        <li>
+            <strong>Access the application:</strong>
+            <p>Open your browser and navigate to <a href="http://localhost:3000">http://localhost:3000</a>. You'll be able to see the combined chat feed for your YouTube live and Shorts live streams.</p>
+        </li>
+    </ol>
+
+    <h3>Configuring the Video IDs</h3>
+    <p>The application allows you to dynamically input the video IDs for the live streams and Shorts directly through the interface.</p>
+    <p>Once you input the video IDs, click the <strong>Update</strong> button to refresh the chat feed with the new streams.</p>
+
+    <h2>Obtaining a YouTube Data API Key</h2>
+
+    <p>To use the YouTube Data API, you'll need an API key. Here's how to get one:</p>
+    <ol>
+        <li><strong>Go to the Google Cloud Console:</strong> Visit <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</li>
+        <li><strong>Create a new project:</strong>
+            <ul>
+                <li>Click on the project drop-down at the top of the page and select "New Project."</li>
+                <li>Name your project and click "Create."</li>
+            </ul>
+        </li>
+        <li><strong>Enable the YouTube Data API v3:</strong>
+            <ul>
+                <li>Go to the <a href="https://console.cloud.google.com/apis/dashboard">APIs &amp; Services</a> section.</li>
+                <li>Click on "Enable APIs and Services" and search for "YouTube Data API v3."</li>
+                <li>Click on it and then click "Enable."</li>
+            </ul>
+        </li>
+        <li><strong>Create credentials:</strong>
+            <ul>
+                <li>Go to the <a href="https://console.cloud.google.com/apis/credentials">Credentials</a> section.</li>
+                <li>Click "Create Credentials" and select "API Key."</li>
+                <li>Your new API key will be displayed. Copy it and paste it into your <code>.env</code> file as shown above.</li>
+            </ul>
+        </li>
+        <li><strong>Restrict your API key (optional but recommended):</strong>
+            <ul>
+                <li>Click on the API key in the credentials list to edit it.</li>
+                <li>Under "API restrictions," select "YouTube Data API v3" to restrict your key's usage to the YouTube API only.</li>
+                <li>Under "Application restrictions," you can restrict it by IP address or HTTP referrers, depending on your needs.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>License</h2>
+    <p>This project is licensed under the MIT License. See the LICENSE file for more details.</p>
+
+    <h2>Acknowledgments</h2>
+    <p>This project uses the <a href="https://developers.google.com/youtube/v3">YouTube Data API v3</a> to fetch live chat data.</p>
+</body>
+</html>
