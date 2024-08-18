@@ -1,0 +1,14 @@
+{
+    "name": "youtube-live-chat-combiner",
+    "version": "1.0.0",
+    "description": "A project to combine two YouTube live chats into one",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2"
+    }
+  }
+  
